@@ -1,5 +1,6 @@
-const Engineer = require("./lib/Engineer");
+const inquirer = require("inquirer");
+const questions = require("./lib/questions");
 
-let bob = new Engineer("Bob", 1, "bob@gmail.com", "github.com/bob");
+inquirer.prompt(questions);
 
-console.log(bob.getGithub());
+console.log("hi");
