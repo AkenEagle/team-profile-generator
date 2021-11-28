@@ -52,16 +52,27 @@ const askTeamQuestions = async () => {
   //   If the user didn't select finish
   while (moreEmployeesAnswers.add_more_list !== "FINISH") {
     if (moreEmployeesAnswers.add_more_list === "Add ENGINEER") {
+      // Ask Engineer questions
       const engineerAnswers = await inquirer.prompt(engineerQuestions);
+
+      //   Create Engineer
       const teamEngineer = createEngineer(engineerAnswers);
+
+      //   Add Engineer in the Engineers array
       engineers.push(teamEngineer);
-      moreEmployeesAnswers = await inquirer.prompt(addMoreEmployees);
     } else {
+      // Ask Intern questions
       const internAnswers = await inquirer.prompt(internQuestions);
+
+      //   Create Intern
       const teamIntern = createIntern(internAnswers);
+
+      //   Add Intern in the Interns array
       interns.push(teamIntern);
-      moreEmployeesAnswers = await inquirer.prompt(addMoreEmployees);
     }
+
+    // Return to the add more employees menu
+    moreEmployeesAnswers = await inquirer.prompt(addMoreEmployees);
   }
 
   console.log(teamManager, engineers, interns);
