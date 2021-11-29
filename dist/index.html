@@ -11,13 +11,40 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <!-- Font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles.css" />
     <title>Team Profile</title>
   </head>
   <body>
     <!-- Heading title -->
-    <h1 class="display-2 text-center text-white">Team Members</h1>
-    <!-- Manager card -->
+    <h1 class="display-2 text-center text-white mt-4 mb-5">Team Members</h1>
+    <!-- Flex container for the cards -->
+    <div class="d-flex p-2 justify-content-center mt-5 text-white">
+      <!-- Manager card -->
+      <div class="card text-center" style="width: 18rem" id="manager-card">
+        <div class="card-body">
+          <h3 class="card-title" id="manager-name">Name</h3>
+          <h4 class="card-title">
+            <i class="fas fa-user-secret" id="manager-role"></i>Manager
+          </h4>
+          <ul class="list-group list-group-flush mt-4 mb-2">
+            <li class="list-group-item text-white" id="manager-id">ID: 3</li>
+            <li class="list-group-item text-white" id="manager-email">
+              Email: akeneagle@gmail.com
+            </li>
+            <li class="list-group-item text-white" id="manager-office">
+              Office number: 24
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
