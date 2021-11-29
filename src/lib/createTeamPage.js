@@ -12,7 +12,7 @@ const createManagerCard = (Manager) => {
   <ul class="list-group list-group-flush mt-4 mb-2">
     <li class="list-group-item text-white" id="manager-id">ID: ${Manager.getId()}</li>
     <li class="list-group-item text-white" id="manager-email">
-      Email:  <a href="mailto:${Manager.getEmail()}">${Manager.getEmail()}</a> 
+    <i class="far fa-envelope"></i><a href="mailto:${Manager.getEmail()}">${Manager.getEmail()}</a> 
     </li>
     <li class="list-group-item text-white" id="manager-office">
       Office number: ${Manager.getOfficeNumber()}
@@ -34,10 +34,10 @@ const createEngineersCards = (engineers) => {
         <ul class="list-group list-group-flush mt-4 mb-2">
           <li class="list-group-item text-white">ID: ${Engineer.getId()}</li>
           <li class="list-group-item text-white">
-            Email: <a href="mailto:${Engineer.getEmail()}">${Engineer.getEmail()}</a> 
+          <i class="far fa-envelope"></i><a href="mailto:${Engineer.getEmail()}">${Engineer.getEmail()}</a> 
           </li>
           <li class="list-group-item text-white">
-            GitHub: <a href="https://github.com/${Engineer.getGithub()}">${Engineer.getGithub()}</a>
+          <i class="fab fa-github"></i><a href="https://github.com/${Engineer.getGithub()}">${Engineer.getGithub()}</a>
           </li>
         </ul>
       </div>
@@ -60,10 +60,10 @@ const createInternsCards = (interns) => {
       <ul class="list-group list-group-flush mt-4 mb-2">
         <li class="list-group-item text-white">ID: ${Intern.getId()}</li>
         <li class="list-group-item text-white">
-          Email: <a href="mailto:${Intern.getEmail()}">${Intern.getEmail()}</a>
+        <i class="far fa-envelope"></i><a href="mailto:${Intern.getEmail()}">${Intern.getEmail()}</a>
         </li>
         <li class="list-group-item text-white">
-          School: ${Intern.getSchool()}
+        <i class="fas fa-graduation-cap"></i>${Intern.getSchool()}
         </li>
       </ul>
     </div>
