@@ -8,6 +8,7 @@ const {
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const createTeamPage = require("./lib/createTeamPage");
 
 const createManager = (managerAnswers) => {
   return new Manager(
@@ -75,7 +76,7 @@ const askTeamQuestions = async () => {
     moreEmployeesAnswers = await inquirer.prompt(addMoreEmployees);
   }
 
-  console.log(teamManager, engineers, interns);
+  createTeamPage(teamManager, engineers, interns);
 };
 
 askTeamQuestions();
