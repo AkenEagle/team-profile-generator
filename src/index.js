@@ -10,6 +10,8 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const createTeamPage = require("./lib/createTeamPage");
 const createTeamPageStyling = require("./lib/createTeamPageStyling");
+const fs = require("fs");
+const open = require("open");
 
 const createManager = (managerAnswers) => {
   return new Manager(
@@ -77,8 +79,26 @@ const askTeamQuestions = async () => {
     moreEmployeesAnswers = await inquirer.prompt(addMoreEmployees);
   }
 
+  //   Create the HTML
   const pageHTML = createTeamPage(teamManager, engineers, interns);
-  const pageCSS = createTeamPageStyling;
+  //   Create the CSS
+  const pageCSS = createTeamPageStyling();
+  //   Create the HTML file
+  fs.writeFile("./dist/index.html", pageHTML, (err) => {
+    if (err) throw err;
+  });
+  //   Create the CSS file
+  fs.writeFile("./dist/styles.css", pageCSS, (err) => {
+    if (err) throw err;
+  });
+
+  //   Open the page
+  await open("./dist/index.html", { wait: true });
+
+  //   Alert the user
+  console.log(
+    "Your generated Team Members page has been opened in your browser."
+  );
 };
 
 askTeamQuestions();

@@ -25,18 +25,18 @@ const createManagerCard = (Manager) => {
 const createEngineersCards = (engineers) => {
   let engineersCardsHTML = ``;
   engineers.forEach((Engineer) => {
-    const thisEngineerCard = `<div class="card text-center" style="width: 18rem" id="engineer-card">
+    const thisEngineerCard = `<div class="card text-center" style="width: 18rem">
       <div class="card-body">
-        <h2 class="card-title mb-2" id="engineer-name">${Engineer.getName().toUpperCase()}</h2>
+        <h2 class="card-title mb-2">${Engineer.getName().toUpperCase()}</h2>
         <h4 class="card-title">
-          <i class="fas fa-user-secret" id="engineer-role"></i>${Engineer.getRole()}
+        <i class="fas fa-user-cog"></i>${Engineer.getRole()}
         </h4>
         <ul class="list-group list-group-flush mt-4 mb-2">
-          <li class="list-group-item text-white" id="engineer-id">ID: ${Engineer.getId()}</li>
-          <li class="list-group-item text-white" id="engineer-email">
+          <li class="list-group-item text-white">ID: ${Engineer.getId()}</li>
+          <li class="list-group-item text-white">
             Email: ${Engineer.getEmail()}
           </li>
-          <li class="list-group-item text-white" id="engineer-github">
+          <li class="list-group-item text-white">
             GitHub: ${Engineer.getGithub()}
           </li>
         </ul>
@@ -53,16 +53,16 @@ const createInternsCards = (interns) => {
   interns.forEach((Intern) => {
     const thisInternCard = `<div class="card text-center" style="width: 18rem" id="intern-card">
     <div class="card-body">
-      <h2 class="card-title mb-2" id="intern-name">${Intern.getName().toUpperCase()}</h2>
+      <h2 class="card-title mb-2">${Intern.getName().toUpperCase()}</h2>
       <h4 class="card-title">
-        <i class="fas fa-user-secret" id="intern-role"></i>${Intern.getRole()}
+      <i class="fas fa-user-graduate"></i>${Intern.getRole()}
       </h4>
       <ul class="list-group list-group-flush mt-4 mb-2">
-        <li class="list-group-item text-white" id="intern-id">ID: ${Intern.getId()}</li>
-        <li class="list-group-item text-white" id="intern-email">
+        <li class="list-group-item text-white">ID: ${Intern.getId()}</li>
+        <li class="list-group-item text-white">
           Email: ${Intern.getEmail()}
         </li>
-        <li class="list-group-item text-white" id="intern-github">
+        <li class="list-group-item text-white">
           School: ${Intern.getSchool()}
         </li>
       </ul>
@@ -110,7 +110,7 @@ const createTeamPage = (manager, engineers, interns) => {
       <!-- Heading title -->
       <h1 class="display-2 text-center text-white mt-4 mb-5">Team Members</h1>
       <!-- Flex container for the cards -->
-      <div class="d-flex p-2 justify-content-center mt-5 text-white">
+      <div class="d-flex p-2 justify-content-evenly mt-5 text-white">
         <!-- Manager card -->
   ${managerCard}
         <!-- Others cards -->
