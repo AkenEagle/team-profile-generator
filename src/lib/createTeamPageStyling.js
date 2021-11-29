@@ -23,6 +23,12 @@ const createTeamPageStyling = () => {
   .list-group-item {
     background-color: rgba(0, 0, 0, 0);
   }
+
+  /* For links */
+  a {
+    color: white;
+  }
+ 
   
   @-webkit-keyframes AnimationName {
     0% {
