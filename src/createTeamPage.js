@@ -1,6 +1,6 @@
-const Manager = require("./Manager");
-const Engineer = require("./Engineer");
-const Intern = require("./Intern");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 const createManagerCard = (Manager) => {
   return `<div class="card text-center" style="width: 18rem" id="manager-card">

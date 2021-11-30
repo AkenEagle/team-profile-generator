@@ -1,10 +1,10 @@
-const Manager = require("./Manager");
+const Engineer = require("../src/lib/Engineer");
 
-let bob = new Manager("bob", 1, "bob@gmail.com", 24);
+let bob = new Engineer("bob", 1, "bob@gmail.com", "bob24");
 
-describe("Manager", () => {
-  test("should be an instance of Manager", () => {
-    expect(bob).toBeInstanceOf(Manager);
+describe("Engineer", () => {
+  test("should be instance of Engineer", () => {
+    expect(bob).toBeInstanceOf(Engineer);
   });
 
   test("should return the expected name", () => {
@@ -19,11 +19,11 @@ describe("Manager", () => {
     expect(bob.getEmail()).toBe("bob@gmail.com");
   });
 
-  test("should return the expected office number", () => {
-    expect(bob.getOfficeNumber()).toBe(24);
+  test("should return the expected github", () => {
+    expect(bob.getGithub()).toBe("bob24");
   });
 
   test("should return the expected role", () => {
-    expect(bob.getRole()).toBe("Manager");
+    expect(bob.getRole()).toBe("Engineer");
   });
 });

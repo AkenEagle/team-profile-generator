@@ -8,8 +8,8 @@ const {
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const createTeamPage = require("./lib/createTeamPage");
-const createTeamPageStyling = require("./lib/createTeamPageStyling");
+const createTeamPage = require("./createTeamPage");
+const createTeamPageStyling = require("./createTeamPageStyling");
 const fs = require("fs");
 const open = require("open");
 
